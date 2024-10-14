@@ -25,3 +25,6 @@ streamlit run Home.py
 
 update git:
 git status 
+git add . 
+git commit -m "Fixed bug in Streamlit app and updated README"
+git push origin main

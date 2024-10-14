@@ -15,6 +15,13 @@ from openai import OpenAI as OpenAIClient
 import os
 import tempfile
 
+try:
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+except ImportError:
+    pass
+
 def install_package(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
