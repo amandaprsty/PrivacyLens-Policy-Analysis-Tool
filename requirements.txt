@@ -7,3 +7,4 @@ chromadb
 protobuf==3.20.*
 pysqlite3-binary
 tiktoken
+python-dotenv
