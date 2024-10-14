@@ -1,14 +1,14 @@
-## PrivacyLens: Policy Analysis Tool - README
+# PrivacyLens: Policy Analysis Tool - README
 
 URL to Deployed Application: https://ewtxfayvgednowu4fk28db.streamlit.app/ 
 
 Note: Ensure you provide your own API credentials in the sidebar to enable all features.
 
 ## Test Case: Privacy Policy Upload and Analysis
-# Purpose
+### Purpose
 This test demonstrates the core functionality of PrivacyLens: uploading a privacy policy document and using AI to ask questions based on its content.
 
-# Steps to Run
+### Steps to Run
 1. Open the deployed application using the URL above.
 2. Upload a sample privacy policy document provided in /test_artifacts:
 <unimelb_privacy_policy.pdf>
