@@ -34,6 +34,21 @@ load_dotenv()
 # Set up OpenAI client
 openai_client = OpenAIClient(api_key=os.getenv("OPENAI_API_KEY"))
 
+##OPENAPI KEY
+if "OPENAI_API_KEY" not in st.session_state:
+    st.session_state.openai_api_key = None
+
+def render_sidebar():
+    st.sidebar.title("API Key Input")
+    api_key = st.sidebar.text_input("Enter your API key:")
+    update_button = st.sidebar.button("Update API Key")
+    return api_key, update_button
+
+api_key, update_button = render_sidebar()
+
+if update_button:
+    st.session_state.openai_api_key = api_key
+
 # Set up Streamlit page
 st.set_page_config(page_title="PrivacyLens: Policy Analysis Tool")
 st.title("PrivacyLens: Policy Analysis Tool")
@@ -122,21 +137,6 @@ with st.sidebar:
     PrivacyLens makes policy analysis quick, easy, and accessible. Start exploring your privacy policies today! :mag:
     """)
     st.markdown("---")
-
-##OPENAPI KEY
-if "OPENAI_API_KEY" not in st.session_state:
-    st.session_state.openai_api_key = None
-
-def render_sidebar():
-    st.sidebar.title("API Key Input")
-    api_key = st.sidebar.text_input("Enter your API key:")
-    update_button = st.sidebar.button("Update API Key")
-    return api_key, update_button
-
-api_key, update_button = render_sidebar()
-
-if update_button:
-    st.session_state.openai_api_key = api_key
 
 # UI IMPROVEMENT: Footer
 st.markdown("---")
