@@ -49,7 +49,7 @@ except ValueError:
     chroma_collection = chroma_client.create_collection(name=collection_name)
 
 # Set up LlamaIndex components
-llm = OpenAI(model="gpt-3.5-turbo", temperature=0.1)
+llm = OpenAI(model="gpt-4o-mini", temperature=0.1)
 embed_model = OpenAIEmbedding()
 prompt_helper = PromptHelper(
     context_window=4096,
