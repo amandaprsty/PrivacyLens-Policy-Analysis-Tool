@@ -141,4 +141,3 @@ if update_button:
 # UI IMPROVEMENT: Footer
 st.markdown("---")
 st.markdown("© 2024 AP Company. All rights reserved.")
-
