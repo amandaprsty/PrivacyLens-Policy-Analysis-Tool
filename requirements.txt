@@ -1,0 +1,9 @@
+llama-index
+llama-index-embeddings-openai
+llama-index-vector-stores-chroma
+openai
+streamlit
+chromadb
+protobuf==3.20.*
+pysqlite3-binary
+tiktoken

@@ -1,5 +1,8 @@
 import streamlit as st
-import chromadb
+import chromadb 
+import subprocess
+import sys
+from chromadb import PersistentClient
 from dotenv import load_dotenv
 from llama_index.core import VectorStoreIndex, SimpleDirectoryReader
 from llama_index.llms.openai import OpenAI
@@ -11,6 +14,16 @@ from llama_index.core import StorageContext
 from openai import OpenAI as OpenAIClient
 import os
 import tempfile
+
+def install_package(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+try:
+    import chromadb
+except ImportError:
+    st.write("Installing chromadb...")
+    install_package('chromadb')
+    import chromadb
 
 # Load environment variables
 load_dotenv()

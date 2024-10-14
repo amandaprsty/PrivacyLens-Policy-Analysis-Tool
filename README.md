@@ -22,3 +22,6 @@ sudo apt update
 sudo apt install sqlite3
 
 streamlit run Home.py
+
+update git:
+git status 
