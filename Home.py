@@ -1,3 +1,8 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+import sqlite3
+print(f"SQLite version: {sqlite3.sqlite_version}")
 import streamlit as st
 import chromadb 
 import subprocess
@@ -14,13 +19,6 @@ from llama_index.core import StorageContext
 from openai import OpenAI as OpenAIClient
 import os
 import tempfile
-
-try:
-    __import__('pysqlite3')
-    import sys
-    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-except ImportError:
-    pass
 
 def install_package(package):
     subprocess.check_call([sys.executable, "-m", "pip", "install", package])
