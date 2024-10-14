@@ -55,4 +55,4 @@ Steps to Run
 Sample Privacy Policy Document
 Location: /test_artifacts/unimelb_privacy_policy.pdf
 
-## Use this document to test the upload and analysis feature. You may also upload any other valid privacy policy (PDF or TXT) for further testing.
+Use this document to test the upload and analysis feature. You may also upload any other valid privacy policy (PDF or TXT) for further testing.
